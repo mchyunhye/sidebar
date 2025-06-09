@@ -1,0 +1,234 @@
+ Conversation opened. 1 read message.
+
+Skip to content
+Using National Mapping and Resource Information Authority Mail with screen readers
+
+1 of 5,697
+LRDAD sidebarmenu_v2
+Inbox
+
+Bryan Ballesteros
+Attachments
+11:16 AM (11 minutes ago)
+to me, Dante
+
+
+
+--
+
+
+ One attachment
+  •  Scanned by Gmail
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sidebar Menu</title>
+  <link href="https://fonts.googleapis.com/css?family=Avenir+Next:400,700" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Avenir+Next:400,700');
+
+    :root {
+      --sidebar-collapsed-width: 64px;
+      --sidebar-expanded-width: 350px;
+      --sidebar-bg: #23272f;
+      --sidebar-hover-bg: #343a40;
+      --icon-size: 32px;
+      --transition-speed: 0.5s;
+      --transition-fast: 0.22s;
+      --font-family: 'Avenir Next', Arial, sans-serif;
+      --accent: #70c1b3;
+      --label-shadow: 0 2px 18px 0 rgba(112, 193, 179, 0.23);
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-family);
+      background: #f5f6fa;
+    }
+    .sidebar-menu {
+      width: var(--sidebar-collapsed-width);
+      background: var(--sidebar-bg);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: width var(--transition-speed) cubic-bezier(0.42, 0, 0.58, 1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 2px 0 6px rgba(0,0,0,0.10);
+      z-index: 10;
+      font-family: var(--font-family);
+      will-change: width;
+    }
+    .sidebar-menu:hover,
+    .sidebar-menu:focus-within {
+      width: var(--sidebar-expanded-width);
+    }
+    .sidebar-menu-list {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      margin-top: 32px;
+    }
+    .sidebar-menu-item {
+      display: flex;
+      align-items: center;
+      padding: 18px 16px;
+      width: 100%;
+      cursor: pointer;
+      transition: background var(--transition-fast), box-shadow var(--transition-fast), filter var(--transition-fast);
+      text-decoration: none;
+      color: inherit;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      outline: none;
+      position: relative;
+      /* Extra for smooth hover shadow effect: */
+      filter: drop-shadow(0 0 0px transparent);
+    }
+    .sidebar-menu-item:hover, .sidebar-menu-item:focus {
+      background: var(--sidebar-hover-bg);
+      box-shadow: 0 4px 28px 0 rgba(112,193,179,0.12);
+      filter: drop-shadow(0 2px 16px var(--accent));
+      z-index: 1;
+    }
+    .sidebar-menu-icon {
+      font-size: var(--icon-size);
+      width: 40px;
+      min-width: 40px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* Enhanced Animation */
+      transition:
+        transform 0.38s cubic-bezier(0.42,0,0.58,1),
+        color 0.22s,
+        filter 0.3s cubic-bezier(0.42,0,0.58,1);
+      will-change: transform, color, filter;
+      filter: drop-shadow(0 0 0 transparent);
+    }
+    .sidebar-menu-item:hover .sidebar-menu-icon,
+    .sidebar-menu-item:focus .sidebar-menu-icon {
+      transform: scale(1.19) rotate(-11deg);
+      color: var(--accent);
+      filter: drop-shadow(0 4px 24px var(--accent));
+    }
+
+    .sidebar-menu-label {
+      margin-left: 22px;
+      white-space: nowrap;
+      font-size: 18px;
+      opacity: 0;
+      transform: translateX(-24px) scale(0.97);
+      transition:
+        opacity var(--transition-speed) cubic-bezier(0.4, 0.2, 0.2, 1),
+        transform var(--transition-speed) cubic-bezier(0.4, 0.2, 0.2, 1),
+        color 0.18s,
+        filter 0.3s;
+      pointer-events: none;
+      letter-spacing: 0.03em;
+      font-family: var(--font-family);
+      font-weight: 600;
+      filter: blur(2px) brightness(0.9);
+      will-change: opacity, transform, color, filter;
+    }
+    .sidebar-menu:hover .sidebar-menu-label,
+    .sidebar-menu:focus-within .sidebar-menu-label {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+      pointer-events: auto;
+      filter: blur(0) brightness(1);
+    }
+    .sidebar-menu-item:hover .sidebar-menu-label,
+    .sidebar-menu-item:focus .sidebar-menu-label {
+      color: var(--accent);
+      text-shadow: var(--label-shadow);
+      filter: blur(0) brightness(1.1) drop-shadow(0 0 8px var(--accent));
+      animation: label-pop 0.55s cubic-bezier(0.7,0.2,0.1,1.2) 1;
+    }
+    @keyframes label-pop {
+      0% {
+        transform: translateX(-20px) scale(0.96);
+        opacity: 0.1;
+        filter: blur(2px) brightness(0.7);
+      }
+      50% {
+        transform: translateX(8px) scale(1.06);
+        opacity: 1;
+        filter: blur(0.5px) brightness(1.15);
+      }
+      100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        filter: blur(0) brightness(1.1) drop-shadow(0 0 8px var(--accent));
+      }
+    }
+    /* Custom SVG icon styling */
+    .custom-svg {
+      width: 1.65em;
+      height: 1.65em;
+      display: inline-block;
+      vertical-align: middle;
+      stroke-width: 1.5;
+    }
+    .custom-svg.regions {
+      stroke-width: 1.3;
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar-menu" tabindex="0">
+    <ul class="sidebar-menu-list">
+      <li>
+        <a href="#home" class="sidebar-menu-item" tabindex="0">
+          <span class="sidebar-menu-icon" aria-label="Home">🏠</span>
+          <span class="sidebar-menu-label">Home</span>
+        </a>
+      </li>
+      <li>
+        <a href="#gender" class="sidebar-menu-item" tabindex="0">
+          <span class="sidebar-menu-icon" aria-label="Gender and Development">♀️</span>
+          <span class="sidebar-menu-label">Gender and Development</span>
+        </a>
+      </li>
+      <li>
+        <a href="#lrdad" class="sidebar-menu-item" tabindex="0">
+          <span class="sidebar-menu-icon" aria-label="LRDAD in Action">
+            <!-- Colored Camera SVG Icon -->
+            <svg class="custom-svg" viewBox="0 0 32 32" fill="none">
+              <rect x="5" y="10" width="22" height="14" rx="4" fill="#fff5db" stroke="#f7b731" stroke-width="2"/>
+              <circle cx="16" cy="17" r="5.2" fill="#ffecb2" stroke="#f7b731" stroke-width="2"/>
+              <rect x="13" y="6" width="6" height="5" rx="2" fill="#f7b731" stroke="#f7b731" stroke-width="1.5"/>
+              <circle cx="24" cy="14" r="1.2" fill="#eb3b5a"/>
+              <rect x="20.5" y="3" width="3" height="5" rx="1.5" fill="#63cdda" stroke="#3dc1d3" stroke-width="1"/>
+            </svg>
+          </span>
+          <span class="sidebar-menu-label">LRDAD in Action</span>
+        </a>
+      </li>
+      <li>
+        <a href="#regions" class="sidebar-menu-item" tabindex="0">
+          <span class="sidebar-menu-icon" aria-label="Regions">
+            <!-- Colored Globe SVG Icon -->
+            <svg class="custom-svg regions" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="12" fill="#b8e994" stroke="#218c5d" stroke-width="2"/>
+              <ellipse cx="16" cy="16" rx="12" ry="6" fill="#38ada9" fill-opacity="0.35" stroke="#218c5d" stroke-width="1.2"/>
+              <ellipse cx="16" cy="16" rx="6" ry="12" fill="#f8c291" fill-opacity="0.35" stroke="#218c5d" stroke-width="1.2"/>
+              <path d="M4 16h24M16 4v24" stroke="#218c5d" stroke-width="1.2"/>
+            </svg>
+          </span>
+          <span class="sidebar-menu-label">Regions</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+</body>
+</html>
+LRDAD sidebar_v2.txt
+Displaying LRDAD sidebar_v2.txt.
