@@ -12,9 +12,15 @@
             background-color: #f0fdf4; /* A soft, light green inspired by fields on a map */
             color: #1f2937;
         }
+
+        /* Custom styles for the login modal overlay */
+        .modal-overlay {
+            background-color: rgba(31, 41, 55, 0.7); /* Dark semi-transparent overlay */
+        }
     </style>
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
+    <!-- Main content container -->
     <div class="bg-white p-8 rounded-2xl shadow-lg max-w-lg w-full text-center transform transition-transform duration-500 hover:scale-105">
         <div class="space-y-6">
             <h1 class="text-4xl sm:text-5xl font-bold text-green-800 leading-tight">
@@ -26,10 +32,10 @@
             </p>
             
             <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
-                <!-- Example of a simple link button -->
-                <a href="https://github.com/your-username" target="_blank" class="w-full sm:w-auto px-6 py-3 bg-green-700 text-white font-semibold rounded-full shadow-md hover:bg-green-800 transition duration-300 transform hover:-translate-y-1">
-                    My GitHub Profile
-                </a>
+                <!-- Login button with a JavaScript onclick handler -->
+                <button onclick="showLoginModal()" class="w-full sm:w-auto px-6 py-3 bg-green-700 text-white font-semibold rounded-full shadow-md hover:bg-green-800 transition duration-300 transform hover:-translate-y-1">
+                    Login
+                </button>
                 
                 <!-- You can add more buttons or links here -->
                 <a href="#" class="w-full sm:w-auto px-6 py-3 bg-lime-200 text-green-800 font-semibold rounded-full shadow-md hover:bg-lime-300 transition duration-300 transform hover:-translate-y-1">
@@ -42,5 +48,50 @@
             </div>
         </div>
     </div>
+
+    <!-- Login Modal - Initially hidden -->
+    <div id="login-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center modal-overlay">
+        <div class="bg-white p-8 rounded-2xl shadow-lg max-w-sm w-full relative">
+            <!-- Close button for the modal -->
+            <button onclick="hideLoginModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            
+            <h2 class="text-2xl font-bold text-center text-green-800 mb-6">Login to the Hub</h2>
+            
+            <form action="#" method="POST" class="space-y-4">
+                <div>
+                    <label for="username" class="block text-left text-sm font-medium text-gray-700">Username</label>
+                    <input type="text" id="username" name="username" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="Enter your username">
+                </div>
+                
+                <div>
+                    <label for="password" class="block text-left text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="password" name="password" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-green-500 focus:border-green-500 sm:text-sm" placeholder="Enter your password">
+                </div>
+                
+                <div class="pt-2">
+                    <button type="submit" class="w-full px-4 py-2 bg-green-700 text-white font-semibold rounded-full shadow-md hover:bg-green-800 transition duration-300 transform hover:-translate-y-1">
+                        Sign In
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- JavaScript to handle modal visibility -->
+    <script>
+        function showLoginModal() {
+            const modal = document.getElementById('login-modal');
+            modal.classList.remove('hidden');
+        }
+
+        function hideLoginModal() {
+            const modal = document.getElementById('login-modal');
+            modal.classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
