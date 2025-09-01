@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geospatial Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0fdf4; /* A soft, light green inspired by fields on a map */
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-8 rounded-2xl shadow-lg max-w-lg w-full text-center transform transition-transform duration-500 hover:scale-105">
+        <div class="space-y-6">
+            <h1 class="text-4xl sm:text-5xl font-bold text-green-800 leading-tight">
+                Geospatial Hub
+            </h1>
+            <p class="text-lg sm:text-xl text-green-700">
+                A centralized hub for managing cadastral data, tax forms, survey returns, and other
+                geospatial data layers to provide accurate land and property information.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-6">
+                <!-- Example of a simple link button -->
+                <a href="https://github.com/your-username" target="_blank" class="w-full sm:w-auto px-6 py-3 bg-green-700 text-white font-semibold rounded-full shadow-md hover:bg-green-800 transition duration-300 transform hover:-translate-y-1">
+                    My GitHub Profile
+                </a>
+                
+                <!-- You can add more buttons or links here -->
+                <a href="#" class="w-full sm:w-auto px-6 py-3 bg-lime-200 text-green-800 font-semibold rounded-full shadow-md hover:bg-lime-300 transition duration-300 transform hover:-translate-y-1">
+                    Contact Me
+                </a>
+            </div>
+            
+            <div class="mt-8 text-sm text-gray-500">
+                <p>To customize this page, simply edit the <code class="bg-gray-100 p-1 rounded-md">index.html</code> file in your repository.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
